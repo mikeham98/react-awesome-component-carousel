@@ -66,17 +66,27 @@ export default class App extends React.Component {
 }
 ```
 
+
+  auto: false,
+  autoDuration: 3,
+  disableButtons: false,
+  components: [],
+  coolOff: 6,
+  transition: slide,
+  transitionDuration: 0.3,
+
+
 ## ComponentViewer
 ### Props
 #### Summary
-|Name                   |Type         |Description                                                                   |
-|-----------------------|-------------|------------------------------------------------------------------------------|
-|auto                   |boolean      |This determines whether or not the images transition automatically            |
-|autoDuration           |number (seconds)      |This sets the duration of when to automatically transition to the next image  |
-|components                |array       |This should be an array of components  |
-|coolOff                |number (seconds)       |This is the duration for how long an image pauses before resuming the auto image transition when the next or previous buttons are clicked  |
-|disableButtons         |boolean      |This will remove the previous and next buttons  |
-|customPrevButton       |component    |This will remove the default left button and use a your custom component, an onClick prop will be passed in  |
-|customNextButton       |component    |This will remove the default right button and use a your custom component, an onClick prop will be passed in  |
-|transition             |string       |This can either be set to 'fade' or 'slide' which will set the transition type of the images |
-|transitionDuration     |number (seconds)       |This is the duration of the transition  |
+|Name                   |Type         |Description                                                                   |Default value |
+|-----------------------|-------------|------------------------------------------------------------------------------|--------------|
+|auto                   |boolean      |This determines whether or not the images transition automatically            |false         |
+|autoDuration           |number (seconds)      |This sets the duration of when to automatically transition to the next image  |3         |
+|components                |array       |This should be an array of components  |[]         |
+|coolOff                |number (seconds)       |This is the duration for how long an image pauses before resuming the auto image transition when the next or previous buttons are clicked  |6         |
+|disableButtons         |boolean      |This will remove the previous and next buttons  |false         |
+|customPrevButton       |component    |This will remove the default left button and use a your custom component, an onClick prop will be passed in  |undefined         |
+|customNextButton       |component    |This will remove the default right button and use a your custom component, an onClick prop will be passed in  |undefined         |
+|transition             |string       |This can either be set to 'fade' or 'slide' which will set the transition type of the images |'slide'         |
+|transitionDuration     |number (seconds)       |This is the duration of the transition  |0.3         |

@@ -166,6 +166,7 @@ export default class ComponentCarousel extends React.PureComponent {
 ComponentCarousel.propTypes = {
   auto: PropTypes.bool,
   autoDuration: PropTypes.number,
+  components: PropTypes.array,
   coolOff: PropTypes.number,
   disableButtons: PropTypes.bool,
   customPrevButton: PropTypes.func,
@@ -177,8 +178,9 @@ ComponentCarousel.propTypes = {
 ComponentCarousel.defaultProps = {
   auto: false,
   autoDuration: 3,
-  disableButtons: false,
+  components: [],
   coolOff: 6,
+  disableButtons: false,
   transition: slide,
   transitionDuration: 0.3,
 };
