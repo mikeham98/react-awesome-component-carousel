@@ -1,4 +1,4 @@
-# 📷 React Awesome Component Viewer 🌈
+# ⚙️ React Awesome Component Viewer 🌈
 <div align="center">
   <a href="https://github.com/mikeham98/react-awesome-component-carousel">
     <img width="250" height="250" src="https://raw.githubusercontent.com/mikeham98/react-awesome-component-carousel/master/assets/react-awesome-component-carousel.svg?sanitize=true">
