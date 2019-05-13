@@ -1,20 +1,29 @@
 import React from 'react';
 import ComponentCarousel from 'react-awesome-component-carousel';
-import image1 from '../assets/img1.jpeg';
-import image2 from '../assets/img2.jpeg';
-import image3 from '../assets/img3.jpeg';
-import './themes/app.scss'
+import './themes/app.scss';
 
-const component1 = () => <img src={image1} />;
-const component2 = () => <img src={image2} />;
-const component3 = () => <img src={image3} />;
+const component1 = () => (
+  <div style={{backgroundColor: '#fd3164', height:  '100vh', width: '100vw'}}>
+    <h1>Slide 1</h1>
+  </div>
+);
+const component2 = () => (
+  <div style={{backgroundColor: '#80a5fd', height:  '100vh', width: '100vw'}}>
+    <h1>Slide 2</h1>
+  </div>
+);
+const component3 = () => (
+  <div style={{backgroundColor: '#1ccb9e', height:  '100vh', width: '100vw'}}>
+    <h1>Slide 3</h1>
+  </div>
+);
 
 const components = [component1, component2, component3];
 
 class App extends React.Component {
   render() {
     return (
-      <div style={{width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden'}}>
+      <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
         <ComponentCarousel
           transition={'slide'}
           transitionDuration={0.3}
