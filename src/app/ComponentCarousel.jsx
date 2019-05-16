@@ -196,7 +196,7 @@ ComponentCarousel.defaultProps = {
   components: [],
   coolOff: 6,
   disableButtons: false,
-  dots: true,
+  dots: false,
   transition: slide,
   transitionDuration: 0.3,
 };
