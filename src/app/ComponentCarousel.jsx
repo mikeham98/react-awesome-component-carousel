@@ -4,6 +4,7 @@ import ComponentFader from './modes/ComponentFader';
 import ComponentSlider from './modes/ComponentSlider';
 import LeftButton from './buttons/LeftButton';
 import RightButton from './buttons/RightButton';
+import Dots from './dots/Dots';
 
 const fade = 'fade';
 const slide = 'slide';
@@ -153,11 +154,24 @@ export default class ComponentCarousel extends React.PureComponent {
     );
   }
 
+  returnDots() {
+    if(this.props.dots) {
+      return (
+        <Dots
+          current={this.state.current}
+          number={this.props.components.length}
+          onClick={(current) => this.setState({current})}
+        />
+      );
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
         {!this.props.disableButtons && this.returnButtons()}
         {this.returnComponents()}
+        {this.returnDots()}
       </React.Fragment>
     );
   }
@@ -168,6 +182,7 @@ ComponentCarousel.propTypes = {
   autoDuration: PropTypes.number,
   components: PropTypes.array,
   coolOff: PropTypes.number,
+  dots: PropTypes.bool,
   disableButtons: PropTypes.bool,
   customPrevButton: PropTypes.func,
   customNextButton: PropTypes.func,
@@ -181,6 +196,7 @@ ComponentCarousel.defaultProps = {
   components: [],
   coolOff: 6,
   disableButtons: false,
+  dots: true,
   transition: slide,
   transitionDuration: 0.3,
 };
