@@ -86,6 +86,7 @@ export default class App extends React.Component {
 |components                |array       |This should be an array of components  |[]         |
 |coolOff                |number (seconds)       |This is the duration for how long an image pauses before resuming the auto image transition when the next or previous buttons are clicked  |6         |
 |disableButtons         |boolean      |This will remove the previous and next buttons  |false         |
+|dots         |boolean      |This will add click-able dots to the bottom of the slider to allow the user to navigate the slides  |false         |
 |customPrevButton       |component    |This will remove the default left button and use a your custom component, an onClick prop will be passed in  |undefined         |
 |customNextButton       |component    |This will remove the default right button and use a your custom component, an onClick prop will be passed in  |undefined         |
 |transition             |string       |This can either be set to 'fade' or 'slide' which will set the transition type of the images |'slide'         |
