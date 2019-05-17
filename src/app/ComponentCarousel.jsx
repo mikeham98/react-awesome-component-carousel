@@ -36,6 +36,11 @@ export default class ComponentCarousel extends React.PureComponent {
     });
   }
 
+  componentWillUnmount() {
+    clearInterval(this.state.autoPlayIntervalId);
+    clearTimeout(this.state.pauseTimeoutId);
+  }
+
   stopAutoPlay() {
     clearTimeout(this.state.autoPlayIntervalId);
   }
